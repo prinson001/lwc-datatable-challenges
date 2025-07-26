@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Data Table Challenge Two" icon-name="utility:classic_interface">
+        <div class="slds-p-around_medium">
+            <template lwc:if={loading}>
+                <lightning-spinner size="medium" alternative-text="Loading"></lightning-spinner>
+            </template>
+            <template lwc:else>
+                <template lwc:if={hasAccounts}>
+                    <lightning-datatable
+                        data={accounts}
+                        columns={columns}
+                        key-field="Id"
+                        draft-values={draftValues}
+                        onsave={handleSave}
+                    ></lightning-datatable>
+                </template>
+                <template lwc:else>
+                    <p class="slds-p-around_large">No Accounts Found</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>
