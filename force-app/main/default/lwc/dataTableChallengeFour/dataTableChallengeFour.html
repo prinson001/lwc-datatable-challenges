@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Data Table Challenge four" icon-name="utility:classic_interface">
+        <div class="slds-p-around_medium">
+            <template lwc:if={loading}>
+                <lightning-spinner size="medium" alternative-text="lightning-spinner"></lightning-spinner>
+            </template>
+            <template lwc:else>
+                <template lwc:if={hasAccounts}>
+                    <lightning-datatable
+                        data={accounts}
+                        columns={columns}
+                        key-field="Id"
+                        hide-checkbox-column
+                        onrowaction={handleRowAction}
+                    ></lightning-datatable>
+                </template>
+                <template lwc:else>
+                    <p class="slds-p-around_large">No Accounts Found</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>
