@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="Data Table Challenge Two" icon-name="utility:classic_interface">
+        <div class="slds-p-around_medium">
+            <template lwc:if={loading}>
+                <lightning-spinner size="medium" alternative-text="Loading"></lightning-spinner>
+            </template>
+            <template lwc:else>
+                <template lwc:if={hasAccounts}>
+                    <lightning-datatable
+                        data={accounts}
+                        columns={columns}
+                        key-field="Id"
+                        hide-checkbox-column
+                        onrowaction={handleRowAction}
+                    ></lightning-datatable>
+                </template>
+                <template lwc:else>
+                    <p class="slds-p-around_large">No Accounts Found</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+
+
+    <template lwc:if={modal}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+            <lightning-icon icon-name="utility:close" size="medium" class="slds-button slds-button_icon slds-modal__close" style="cursor: pointer;" onclick={modalClose}></lightning-icon>
+            <div class="slds-modal__header">
+            <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate" tabindex="-1">{modalHeader}</h1>
+            </div>
+            <div class="slds-modal__content slds-p-around_medium" style="min-height: 5rem;" id="modal-content-id-1">
+                <lightning-record-form
+                    record-id={selectedAccount}
+                    object-api-name="Account"
+                    layout-type="Compact"
+                    mode={modalType}
+                    onsuccess={handleSuccess}
+                >
+                </lightning-record-form>
+            </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+</template>
