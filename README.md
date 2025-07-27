@@ -30,7 +30,7 @@ Each challenge is isolated, documented, and built to help you master datatable f
 | 1  | Basic Table                      | [🔗 Challenge 1](https://github.com/prinson001/lwc-datatable-challenges/tree/main/force-app/main/default/lwc/dataTableChallengeOne) |
 | 2  | Inline Editing & Save           | [🔗 Challenge 2](https://github.com/prinson001/lwc-datatable-challenges/tree/main/force-app/main/default/lwc/dataTableChallengeTwo) |
 | 3  | Row Actions                      | [🔗 Challenge 3](https://github.com/prinson001/lwc-datatable-challenges/tree/main/force-app/main/default/lwc/dataTableChallengeThree) |
-| 4  | Bulk Selection & Action         | [🔗 Challenge 4](https://github.com/prinson001/lwc-datatable-challenges/tree/main/force-app/main/default/lwc/datatableChallenge4) |
+| 4  | Add Button in Cell         | [🔗 Challenge 4](https://github.com/prinson001/lwc-datatable-challenges/tree/main/force-app/main/default/lwc/datatableChallengeFour) |
 | 5  | Conditional Styling             | [🔗 Challenge 5](https://github.com/prinson001/lwc-datatable-challenges/tree/main/force-app/main/default/lwc/datatableChallenge5) |
 | 6  | Parent-Child Display            | [🔗 Challenge 6](https://github.com/prinson001/lwc-datatable-challenges/tree/main/force-app/main/default/lwc/datatableChallenge6) |
 | 7  | Client-side Pagination          | [🔗 Challenge 7](https://github.com/prinson001/lwc-datatable-challenges/tree/main/force-app/main/default/lwc/datatableChallenge7) |
